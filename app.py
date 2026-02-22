@@ -36,8 +36,7 @@ with st.sidebar:
 # ─────────────────────────────────────────────
 st.title("🤖 Agentic RAG")
 st.markdown(
-    "Ask any question about the ingested documents. "
-    "The agent will search the **Postgres vector store** and answer using retrieved context."
+   "I am your **Smart Agent**, and I love to answer your questions relevant to my purpose."
 )
 st.divider()
 
@@ -95,3 +94,4 @@ if prompt := st.chat_input("Ask a question about the documents…"):
         full_response = st.write_stream(sync_generator())
 
     st.session_state.messages.append({"role": "assistant", "content": full_response})
+
